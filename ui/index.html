@@ -1,0 +1,77 @@
+<body>
+
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="ui.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1>Notes Application</h1>
+            <div>
+                <button class="btn btn-danger" id="btn-logout">Logout</button>
+            </div>
+        </div>
+        <div id="message-popup" class="alert alert-dismissible fade" role="alert">
+            <span id="message"></span>
+            <button type="button" class="close" onclick='hideMessage()' aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col col-6">
+                <label id="lbl-user-name"></label>
+                <br />
+                <label id="lbl-credit">Credit: <b>$<span id="points-span">0</span></b></label>
+            </div>
+        </div>
+        <br />
+
+        <div class="row" id="login-section">
+            <div class="col col-6">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input class="form-control" type="input" id="in-email" />
+                </div>
+
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input class="form-control" type="password" id="in-password" />
+                </div>
+                <div>
+                    <button class="btn btn-success" id="btn-register">Register</button>
+                    <button class="btn btn-info" id="btn-login">Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="notes-section">
+            <div class="col col-5">
+                <div class="form-group">
+                    <div id="add-notes-section">
+                        <label><b>Add Note:</b></label>
+                        <div style="display: flex;">
+                            <input class="form-control" id="in-note" />
+                            <button class="btn btn-success" id="btn-save">+</button>
+                        </div>
+                    </div>
+                    <div id="payment-section">
+                        <button class="btn btn-info" id="btn-pay">$Pay</button>
+                        <div>
+                            <label style="color: red;">
+                                Insufficient credit, please pay $1 to add 1 more note
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <label><b>Notes:</b></label>
+                <div id="notes-list">
+
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
